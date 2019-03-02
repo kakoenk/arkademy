@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+  function checkPassword(str){
+
+    var re = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_^#&]).{8}$/;
+    return re.test(str);
+  }
+  function checkForm(form){
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(!checkPassword(form.pwd1.value)) {
+        alert("Password harus berupa huruf kecil, huruf besar, angka dan karakter spesial. dengan panjang parameter 8 karakter!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: isi konfirmasi Password harus sama dengan Password!");
+      form.pwd1.focus();
+      return false;
+    }
+    return true;
+  }
+
+</script>
+ <!-- FORM UNTUK TESTING -->
+<!-- <form method="POST" action="..." onsubmit="return checkForm(this);">
+<p>Password: <input type="text" name="pwd1"></p>
+<p>Confirm Password: <input type="text" name="pwd2"></p>
+<p><input type="submit"></p>
+</form> -->

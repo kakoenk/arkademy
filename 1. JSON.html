@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1</title>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+</html>
+<script>
+var bio = {
+  "name"    : "FAKIH KAKUNG MANAFI",
+  "address" : "jakarta",
+  "hobbies" : [
+              "ngoding",
+              "travelling"
+             ],
+  "is_merried": false,
+  "school"    : {
+               "highSchool": "SMK MUHAMMADIYAH 2 KALIREJO",
+               "university": "UNIVERSITAS"
+             },
+  "skill"     : [
+              {
+                "lenguage_programming": "html",
+                "level": "beginer"
+               },
+             {
+                 "lenguage_programming": "php",
+                 "level": "beginer"
+             },
+            {
+                 "lenguage_programming": "java",
+                 "level": "beginer"
+              }
+           ]
+};
+var x=JSON.stringify(bio);
+document.getElementById("demo").innerHTML = x;
+</script>
+
